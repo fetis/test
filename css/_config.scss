@@ -1,0 +1,29 @@
+// Colors
+$colorWhite: #fff;
+$colorGray: #5c5c5c;
+$colorLightGray: #f4f4f4;
+$colorBlue: #00a9d9;
+$colorLightBlue: #a0daee;
+
+$colorText: $colorGray;
+$colorTextLight: #bfbfbf;
+$colorTextBlue: $colorBlue;
+
+$colorSep: #e2e2e2;
+$colorSepLight: $colorLightGray;
+
+// Dimensions
+$headerHeight: 50px;
+
+
+$gridGap: 10px;
+$gridGap2: 2 * $gridGap;
+$gridGap3: 3 * $gridGap;
+
+// Typography
+$fontNormal: 14px;
+$fontSmall: 12px;
+
+// Bootstrap config
+$brand-primary: $colorBlue;
+$btn-primary-border: transparent;

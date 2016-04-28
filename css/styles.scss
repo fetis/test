@@ -1,0 +1,182 @@
+@import "config";
+
+@import "./node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
+
+
+body {
+  background: $colorWhite;
+  color: $colorText;
+  font: $fontNormal 'Open Sans', Arial, Helvetica, sans-serif;
+  padding: $headerHeight 0 0;
+}
+
+header {
+  background: $colorWhite url(../img/header-bg.png) no-repeat 0 0;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: $headerHeight;
+  width: 100%;
+  border-bottom: 1px solid $colorSep;
+}
+
+h1 {
+  font-size: 23px;
+  color: $colorGray;
+  margin: 0;
+}
+
+.table-panel {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: $colorLightGray;
+  padding: 0 $gridGap2;
+
+  &__header {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__form {
+    width: 50%;
+    margin-left: $gridGap;
+  }
+
+  &__controls {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    button {
+      margin-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+.ip-table {
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    border-bottom: 1px solid $colorLightGray;
+  }
+
+  td, th {
+    padding: $gridGap;
+
+    &:first-child {
+      padding-left: $gridGap2;
+    }
+
+    &:last-child {
+      padding-right: $gridGap2;
+    }
+  }
+
+  th {
+    background: $colorLightGray;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  td:first-child {
+    color: $colorTextLight;
+  }
+}
+
+.summary {
+  background: $colorLightGray;
+  padding: $gridGap $gridGap2;
+  
+  &__total {
+    color: $colorTextLight;
+    font-size: $fontSmall;
+    margin-bottom: $gridGap;
+  }
+}
+
+.s-pagination {
+  display: flex;
+  align-items: center;
+
+  &__pages {
+    flex-grow: 1;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-left: 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+  &__next {
+    margin-left: $gridGap;
+  }
+}
+
+.s-pagination-button {
+  display: block;
+  padding: $gridGap;
+  text-align: center;
+  min-width: 30px;
+  background: $colorWhite;
+  text-decoration: none;
+  color: $colorTextBlue;
+
+  &:hover {
+    text-decoration: none;;
+    background: $colorLightBlue;
+    color: $colorWhite;
+  }
+
+  &--active,
+  &--normal{
+    background: transparent;
+    font-weight: bold;
+    color: $colorText;
+
+    &:hover {
+      background: transparent;
+      color: $colorText;
+    }
+  }
+}
+
+.btn {
+  &:hover {
+    background: $colorLightBlue;
+    color: $colorWhite;
+  }
+}
+
+.filter-form {
+  display: flex;
+  align-items: center;
+
+  > div {
+    margin: 0 $gridGap;
+  }
+}
+
+.modal-content-scroll {
+  max-height: 150px;
+  overflow-y: auto;
+}
